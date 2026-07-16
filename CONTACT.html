@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Little Pixels</title>
+    <link rel="stylesheet" href="CONTACT.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url(./21.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Navigation Styling */
+        .nav {
+            display: flex;
+            background-color: rgb(3, 3, 29);
+            justify-content: center;
+            width: 100%;
+        }
+
+        .nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .nav ul li {
+            padding: 10px 15px;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            padding: 10px 15px;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav ul li a:hover {
+            color: #2baad1;
+        }
+
+        .contact-container {
+            background-color: rgb(7, 7, 53);
+            padding: clamp(15px, 4vw, 20px);
+            margin: clamp(20px, 6vw, 50px) auto;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #e7e1e1;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            color: #ffffff;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .social-links {
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px 15px;
+            color: #ffffff;
+            background-color: rgb(7, 7, 53);
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .social-links p {
+            margin: 0;
+            font-size: clamp(1rem, 3vw, 1.2em);
+            margin-bottom: 10px;
+        }
+
+        .social-links a {
+            color: #2baad1;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: clamp(0.95rem, 2.5vw, 1.1em);
+            display: inline-block;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: rgb(3, 3, 29);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: clamp(0.75rem, 2vw, 0.9em);
+            padding: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 5px;
+            }
+
+            .nav ul li {
+                padding: 5px;
+            }
+
+            .contact-container,
+            .social-links {
+                width: 92%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-container {
+                padding: 12px;
+                margin: 15px auto;
+            }
+
+            .social-links a {
+                margin: 6px 8px;
+            }
+
+            input,
+            textarea,
+            button {
+                padding: 8px;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .nav ul li a {
+                font-size: 0.85rem;
+                padding: 5px 8px;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ABOUTUS.html">About Us</a></li>
+            <li><a href="SERVICES.html">Services</a></li>
+            <li><a href="CONTACT.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="social-links">
+        <p>Follow Us:</p>
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Twitter</a>
+        <a href="#" target="_blank">Instagram</a>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <p>&copy; 2025 Three Little Pixels. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

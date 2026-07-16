@@ -1,0 +1,271 @@
+<html lang="en">
+<head>
+  <title>Three Little Pixels</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body{
+      margin: 0;
+      padding: 0;
+      background-image: url(./wdf.jpeg);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Navigation Bar */
+  .nav {
+      display: flex;
+      background-color: rgb(3, 3, 29);
+      justify-content: center;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+  }
+
+  .nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+      justify-content: center;
+      width: 100%;
+  }
+
+  .nav ul li {
+      padding: 10px 15px;
+  }
+
+  .nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+      padding: 10px 15px;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+  }
+
+  .nav ul li a:hover {
+      color: #2baad1;
+  }
+
+  /* Services Section */
+  .services {
+      text-align: center;
+      padding: 2em 1em;
+      width: 100%;
+  }
+
+  .services h1 {
+      font-size: clamp(1.5em, 5vw, 2.5em);
+      margin-bottom: 1em;
+      color: rgb(3, 3, 29);
+      padding: 0 0.5em;
+  }
+
+  /* Table wrapper allows horizontal scroll on small screens
+     instead of squeezing/breaking the table layout */
+  .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  .service-table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 60%;
+      min-width: 320px;
+      background-color: #fff;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-table th, .service-table td {
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      text-align: left;
+      font-size: clamp(0.8rem, 1.8vw, 1rem);
+  }
+
+  .service-table th {
+      background-color: rgb(3, 3, 29);
+      color: white;
+      font-weight: bold;
+  }
+
+  .service-table tr:hover {
+      background-color: #ddd;
+  }
+
+  /* FAQ Section */
+  .faq {
+      margin: 2em auto;
+      padding: 1em;
+      width: 80%;
+      max-width: 900px;
+      background-color: #fff;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+  }
+
+  .faq h2 {
+      text-align: center;
+      margin-bottom: 1em;
+      color: rgb(3, 3, 29);
+      font-size: clamp(1.3em, 4vw, 2em);
+  }
+
+  .faq-item {
+      margin-bottom: 1.5em;
+  }
+
+  .faq-item h3 {
+      font-size: clamp(1em, 2.5vw, 1.2em);
+      color: rgb(3, 3, 29);
+      margin-bottom: 0.5em;
+  }
+
+  .faq-item p {
+      font-size: clamp(0.85em, 2vw, 1em);
+      color: rgb(3, 3, 29);
+      line-height: 1.6;
+  }
+
+  /* Footer */
+  .footer {
+      background-color: rgb(3, 3, 29);
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: 2em;
+      width: 100%;
+  }
+
+  .footer p {
+      margin: 0;
+      font-size: clamp(0.75em, 2vw, 0.9em);
+      padding: 0 1em;
+  }
+
+  @media (max-width: 1024px) {
+      .service-table {
+          width: 85%;
+      }
+
+      .faq {
+          width: 90%;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .nav ul {
+          flex-direction: column;
+          align-items: center;
+          padding: 5px;
+      }
+
+      .nav ul li {
+          padding: 6px 15px;
+      }
+
+      .service-table {
+          width: 95%;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .services {
+          padding: 1.5em 0.5em;
+      }
+
+      .service-table {
+          width: 100%;
+          min-width: 0;
+      }
+
+      .service-table th, .service-table td {
+          padding: 8px 10px;
+      }
+
+      .faq {
+          width: 94%;
+          padding: 1em 0.75em;
+      }
+  }
+</style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ABOUTUS.html">About Us</a></li>
+          <li><a href="SERVICES.html">Services</a></li>
+          <li><a href="CONTACT.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+    <div class="services">
+        <h1>Our Photography Services</h1>
+
+        <!-- Services Table -->
+        <div class="table-wrapper">
+            <table class="service-table">
+                <tr>
+                    <th>Service</th>
+                    <th>Description</th>
+                    <th>Starting Price</th>
+                </tr>
+                <tr>
+                    <td>Portrait Photography</td>
+                    <td>High-quality individual or family portraits, capturing your best moments.</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>Wedding Shoots</td>
+                    <td>Full-day wedding photography coverage with both candid and traditional shots.</td>
+                    <td>$1000</td>
+                </tr>
+                <tr>
+                    <td>Event Coverage</td>
+                    <td>Professional photography services for events, parties, and corporate gatherings.</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>Product Photography</td>
+                    <td>Studio-quality photos to highlight your products for online or print marketing.</td>
+                    <td>$300</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What should I wear for a portrait session?</h3>
+                <p>We recommend wearing solid colors and avoiding overly busy patterns. It's important to feel comfortable and confident in your outfit!</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long will it take to receive my photos?</h3>
+                <p>We aim to deliver your photos within 2-4 weeks, depending on the complexity of the shoot. We will keep you updated throughout the process!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Three Little Pixels. All rights reserved.</p>
+    </footer>
+</body>
+</html>

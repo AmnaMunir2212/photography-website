@@ -1,0 +1,239 @@
+<html>
+<head>
+<title>Three Little Pixels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+*{box-sizing:border-box;}
+body{
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+video {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -1;
+}
+.navbar{
+display: flex;
+align-items:center;
+justify-content: center;
+background-color: rgb(3, 3, 29);
+position:relative;
+padding:5px 15px;
+}
+.navbar ul{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+list-style:none;
+padding:10px;
+margin:0;
+}
+.navbar li {
+padding: 10px 15px;
+}
+
+.navbar li a {
+text-decoration: none;
+color: #fff;
+font-size: 1.2rem;
+padding: 10px 15px;
+white-space:nowrap;
+}
+.navbar li a:hover {
+color: #2baad1;
+}
+
+/* hamburger button, hidden on desktop */
+.nav-toggle{
+display:none;
+background:none;
+border:none;
+cursor:pointer;
+padding:8px;
+margin-left:auto;
+}
+.nav-toggle span{
+display:block;
+width:26px;
+height:3px;
+background:#fff;
+margin:5px 0;
+border-radius:2px;
+transition:transform .25s ease, opacity .25s ease;
+}
+
+.heading{
+    max-width:1000px;
+    width:90%;
+    margin:0 auto;
+    padding:30px 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.heading h1{
+    margin-top:20px;
+    margin-bottom:0;
+    text-align:center;
+    font-weight:bolder;
+    color:rgb(13,2,32);
+    font-size:clamp(2rem,5vw,3rem);
+}
+
+.heading p{
+    color:rgb(13,2,32);
+    font-size:clamp(1rem,2vw,1.2rem);
+    font-weight:bolder;
+    text-align:center;
+}
+
+.footer{
+    background-color:rgb(3,3,29);
+    color:rgb(241,240,243);
+    width:100%;
+    margin-top:auto;
+    text-align:center;
+    padding:12px 15px;
+}
+@media (max-width:1024px){
+
+.heading{
+width:92%;
+padding:25px 0;
+}
+
+.heading h1{
+font-size:2.5rem;
+}
+
+.footer{
+padding:12px;
+}
+
+}
+
+@media (max-width:768px){
+
+.navbar{
+justify-content:space-between;
+}
+
+.nav-toggle{
+display:block;
+}
+
+.navbar ul{
+display:none;
+flex-direction:column;
+width:100%;
+align-items:stretch;
+text-align:center;
+padding:0;
+position:absolute;
+top:100%;
+left:0;
+background-color:rgb(3, 3, 29);
+z-index:10;
+}
+
+.navbar ul.open{
+display:flex;
+}
+
+.navbar li{
+padding:0;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.navbar li a{
+display:block;
+padding:14px 10px;
+font-size:1.05rem;
+}
+
+.heading{
+width:92%;
+padding:20px 0;
+}
+
+.heading h1{
+font-size:2rem;
+}
+
+.heading p{
+font-size:1rem;
+}
+
+}
+
+@media (max-width:480px){
+
+.heading{
+width:95%;
+padding:15px 0;
+}
+
+.heading h1{
+font-size:1.6rem;
+line-height:1.3;
+}
+
+.heading p{
+font-size:.95rem;
+}
+
+.footer{
+padding:10px;
+font-size:.9rem;
+}
+
+}
+
+</style>
+<body>
+<video src="./2851008-uhd_4096_2160_24fps.mp4" loop muted autoplay playsinline></video>
+<div class="navbar">
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<ul id="navMenu">
+<li><a href="index.html">Home</a></li>
+<li><a href="ABOUTUS.html">About Us</a></li>
+<li><a href="SERVICES.html">Services</a></li>
+<li><a href="CONTACT.html">Contact Us</a></li>
+</ul>
+</div>
+
+<div class="heading">
+<h1>Capturing Moments, <br>Creating Memories</h1>
+<p><br>Welcome to the art of photography, where memories are crafted to last forever.
+Step into a world where every click tells a story, and every moment is timeless.</p>
+</div>
+
+<div class="footer">
+<footer>
+<p>&copy; 2025 THREE LITTLE PIXELS. All rights reserved.</p>
+</footer>
+</div>
+
+<script>
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+navToggle.addEventListener('click', function(){
+  const isOpen = navMenu.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen);
+});
+</script>
+</body>
+</html>
