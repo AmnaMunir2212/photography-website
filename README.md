@@ -5,8 +5,7 @@ This project showcases a photography studio with different sections including se
 
 ## 🌐 Live Website
 
-https://photography-website222.netlify.app/
-
+https://photography-website121.netlify.app/
 ## 📌 Features
 
 - Responsive photography website design
@@ -35,10 +34,6 @@ Photography-Website/
 ├── script.js
 └── images/
 
-
-## 🚀 Deployment
-
-The website is deployed using **Netlify**.
 
 ## 👩‍💻 Author
 
